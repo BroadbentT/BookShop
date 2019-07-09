@@ -9,6 +9,6 @@ A java script file to take stock of books.
 - [x] Tested and working...
 
 ## CONSOLE DISPLAY
-![Screenshot](picture1.png)
+![Screenshot](BookShop.jpg)
 
 
