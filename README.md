@@ -1,5 +1,5 @@
 # BOOKSHOP 
-A java script file to manage a stock of books.
+An object-oriented java script file to stock-manage books.
 
 | LANGUAGE | FILENAME | MD5 Hash |
 |------    |------    | -------  |
