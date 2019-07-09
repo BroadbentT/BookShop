@@ -1,21 +1,30 @@
 // *****************************************************************************
-//  STAFFORDSHIRE UNIVERSITY
-//  FACILITY OF COMPUTING, ENGINEERING & SCIENCE 
-//  SCHOOL OF COMPUTING
-//
-//  CESMCOM10070/4 DATA STORAGE AND SOFTWARE DEVELOPMENT - SEMESTER 2
-//  TUTORIAL SESSIONS EXERCISES & PORTFOLIO ASSIGNMENTS 43
-//
-//  JAVA PROGRAMMER TERENCE BROADBENT - B028035c@student.staffs.ac.uk
-//  DATE: 26.02.2014 VERSION 1.0
-//
-//  TASK 1
+//                     JAVA BOOKSHOP - STOCK UTILITY FILE
+//           BY TERENCE BROADBENT BSC CYBER SECURITY (FIRST CLASS)
+// *****************************************************************************
+
+// ***************************************************************************** 
+// AUTHOR  : Terence Broadbent                                                    
+// CONTRACT: GitHub                                                               
+// Version : 1.0                                                                
+// Details : Load required imports.
+// Modified: N/A
+// *****************************************************************************
+
+package Application;
+
+// ***************************************************************************** 
+// AUTHOR  : Terence Broadbent                                                    
+// CONTRACT: GitHub                                                               
+// Version : 1.0                                                                
+// Details : Create and populate program variables.
+// Modified: N/A
 // *****************************************************************************
 
 public class BookShop {
 
-private String title;
-private String author;
+final private String title;
+final private String author;
 
 public String getTitle() {
 return title;
@@ -31,7 +40,6 @@ author = "Anon";
 }
 public BookShop(String title, String author) {
 this.title = title;
-this.author = author;
-}
-// Eof.
-}
+this.author = author;}}
+
+//Eof....
