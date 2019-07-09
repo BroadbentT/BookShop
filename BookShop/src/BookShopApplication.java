@@ -1,84 +1,112 @@
 // *****************************************************************************
-//  STAFFORDSHIRE UNIVERSITY
-//  FACILITY OF COMPUTING, ENGINEERING & SCIENCE 
-//  SCHOOL OF COMPUTING
-//
-//  CESMCOM10070/4 DATA STORAGE AND SOFTWARE DEVELOPMENT - SEMESTER 2
-//  TUTORIAL SESSIONS EXERCISES & PORTFOLIO ASSIGNMENTS 43
-//
-//  JAVA PROGRAMMER TERENCE BROADBENT - B028035c@student.staffs.ac.uk
-//  DATE: 26.02.2014 VERSION 1.0
-//
-//  TASK 1
+//                     JAVA BOOKSHOP - STOCK UTILITY FILE
+//           BY TERENCE BROADBENT BSC CYBER SECURITY (FIRST CLASS)
 // *****************************************************************************
 
-// *****************************************************************************
-// Call any imports to be used by the program
-// *****************************************************************************
-
-    import java.util.*;
-
-// *****************************************************************************
-// Main 
+// ***************************************************************************** 
+// AUTHOR  : Terence Broadbent                                                    
+// CONTRACT: GitHub                                                               
+// Version : 1.0                                                                
+// Details : Load required imports.
+// Modified: N/A
 // *****************************************************************************
 
-    public class BookShopApplication {
+package Application;
+
+// ***************************************************************************** 
+// AUTHOR  : Terence Broadbent                                                    
+// CONTRACT: GitHub                                                               
+// Version : 1.0                                                                
+// Details : Call any imports to be used by the program.
+// Modified: N/A
+// *****************************************************************************
+
+import java.util.*;
+
+// ***************************************************************************** 
+// AUTHOR  : Terence Broadbent                                                    
+// CONTRACT: GitHub                                                               
+// Version : 1.0                                                                
+// Details : The main program.
+// Modified: N/A
+// *****************************************************************************
+
+ public class BookShopApplication {
     public static void main(String[] args) {
-    
+        
+// ***************************************************************************** 
+// AUTHOR  : Terence Broadbent                                                    
+// CONTRACT: GitHub                                                               
+// Version : 1.0                                                                
+// Details : Create and populate program variables.
+// Modified: N/A
 // *****************************************************************************
-//  Create and populate where necessary any variables used by this program
-// *****************************************************************************
-    
-    BookShop [] books = new BookShop [10];                                      // 10 values
+
+    BookShop [] books = new BookShop [10];                                      // 10 books max.
     Scanner myKeyboard = new Scanner(System.in);
-    
-// *****************************************************************************
-// Obtain the book information from the user via the keyboard
+
+// ***************************************************************************** 
+// AUTHOR  : Terence Broadbent                                                    
+// CONTRACT: GitHub                                                               
+// Version : 1.0                                                                
+// Details : Obtain the book information from the user via the keyboard.
+// Modified: N/A
 // *****************************************************************************
 
     for(int NumLoop = 0; NumLoop < books.length; ++NumLoop){
     books[NumLoop] = getBook(myKeyboard);}
-     
-// *****************************************************************************
-// Display the results of books[] array to the user via the screen
-// *****************************************************************************
     
+// ***************************************************************************** 
+// AUTHOR  : Terence Broadbent                                                    
+// CONTRACT: GitHub                                                               
+// Version : 1.0                                                                
+// Details : now display the results of book[] to the user.
+// Modified: N/A
+// *****************************************************************************    
+
     printBookDetails(books);
 }
-// *****************************************************************************
-//  End of program - Job well done!
-// *****************************************************************************
-    
-// *****************************************************************************
-// Method getBook() - obtain the information from the user
-// *****************************************************************************
-    
-    private static BookShop getBook(Scanner myKeyboard)
-    {
-        System.out.print("Please enter the Title of this Book: ");
-        String GrabBookName = myKeyboard.nextLine();
-        System.out.print("Please enter the Author of this Book: ");
-        String GrabAuthorName = myKeyboard.nextLine();
 
+// ***************************************************************************** 
+// AUTHOR  : Terence Broadbent                                                    
+// CONTRACT: GitHub                                                               
+// Version : 1.0                                                                
+// Details : Method getBook() - Obtain the book information from the user.
+// Modified: N/A
 // *****************************************************************************
-// Now populate the program variables with the supplied user data
+    
+    private static BookShop getBook(Scanner myKeyboard){
+    System.out.print("Please enter the Title of this Book: ");
+    String GrabBookName = myKeyboard.nextLine();
+    System.out.print("Please enter the Author of this Book: ");
+    String GrabAuthorName = myKeyboard.nextLine();
+
+// ***************************************************************************** 
+// AUTHOR  : Terence Broadbent                                                    
+// CONTRACT: GitHub                                                               
+// Version : 1.0                                                                
+// Details : Now populate the program variables with the supplied user data.
+// Modified: N/A
 // *****************************************************************************
 
-        BookShop Book;
-        if (GrabAuthorName.equals("")){
-        Book = new BookShop(GrabBookName);}
-        else {Book = new BookShop(GrabBookName, GrabAuthorName);}
-        return Book;}
-    
-// *****************************************************************************
-// Method printBookDetails() - Print the data to the screen
-// *****************************************************************************
-    
+    BookShop Book;
+    if (GrabAuthorName.equals("")){
+    Book = new BookShop(GrabBookName);}
+    else {Book = new BookShop(GrabBookName, GrabAuthorName);}
+    return Book;}
+
+// ***************************************************************************** 
+// AUTHOR  : Terence Broadbent                                                    
+// CONTRACT: GitHub                                                               
+// Version : 1.0                                                                
+// Details : All done, print the stock of books to the screen.
+// Modified: N/A
+// *****************************************************************************    
+ 
     private static void printBookDetails(BookShop[] books){
     System.out.println("\n\nBook list:\nTitle\t\t\t\tAuthor");
     System.out.println("==========\t\t\t==========");
     for (int NumLoop = 0; NumLoop < books.length; NumLoop++) {
-    System.out.println(books[NumLoop].getTitle() + "\t\t\t" + books[NumLoop].getAuthor());}
-    }
-    //Eof.
-    }
+    System.out.println(books[NumLoop].getTitle() + "\t\t\t" + books[NumLoop].getAuthor());}}}
+
+//Eof...
